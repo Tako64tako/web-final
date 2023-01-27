@@ -1,0 +1,29 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ssr-server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "buffer": "^6.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graceful-fs": "^4.2.10",
+    "mongoose": "^6.9.0",
+    "mongose": "^0.0.2-security",
+    "next": "^13.1.5",
+    "node-fetch": "^2.6.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-dom": "^18.2.0",
+    "request": "^2.88.2",
+    "stream-browserify": "^3.0.0",
+    "url": "^0.11.0"
+  },
+  "description": ""
+}
