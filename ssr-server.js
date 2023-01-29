@@ -42,6 +42,14 @@ app.prepare()
             return app.render(req, res, '/addDaily', req.query)
         });
 
+        server.post('/deleteDaily/post:id', async (req, res) => {
+            const
+                id = req.body.id,
+                deletedDaily = await Daily.findByIdAndDelete(id);
+
+            return app.render(req, res, '/deleteDaily', req.query)
+        });
+
         server.get('*', (req, res) => {
             return handle(req, res)
         })
