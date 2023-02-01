@@ -42,11 +42,16 @@ app.prepare()
             return app.render(req, res, '/addDaily', req.query)
         });
 
-        server.post('/deleteDaily/post:id', async (req, res) => {
-            const
-                id = req.body.id,
-                deletedDaily = await Daily.findByIdAndDelete(id);
-
+        server.get('/deleteDaily/get:id', async (req, res) => {
+            const id = req.query.id;
+            deletedDaily = await Daily.findByIdAndDelete (id, function (err, docs) {
+                if (err) {
+                    console.log(err)
+                }
+                else {
+                    console.log("Deleted : ", docs);
+                }
+            });
             return app.render(req, res, '/deleteDaily', req.query)
         });
 

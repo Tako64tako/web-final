@@ -32,7 +32,7 @@ export default class index extends React.Component {
               <ListGroup className="list-group-flush">
                 <ListGroupItem >
                   {this.props.posts.map(daily => (
-                    <div>
+                    <div key={daily._id}>
                       <Card.Title>{daily.title}</Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">
                         {daily.created}

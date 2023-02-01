@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node ssr-server.js"
+    "dev": "NODE_OPTIONS='--inspect' node ssr-server.js"
   },
   "keywords": [],
   "author": "",
